@@ -1,4 +1,5 @@
 {% load staticfiles %}
+{% load crispy_forms_tags %}
 <!DOCTYPE html>
 <!--[if lt IE 7]>      <html lang="en" class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
 <!--[if IE 7]>         <html lang="en" class="no-js lt-ie9 lt-ie8"> <![endif]-->
@@ -42,6 +43,7 @@
 
 		<!-- Modernizer Script for old Browsers -->
         <script src='{% static "js/modernizr-2.6.2.min.js" %}'></script>
+
 
     </head>
 	
@@ -511,7 +513,7 @@ We work on behalf of property owner and deal directly with prospects and tenants
 						
 						
 						<div class="col-md-7 contact-form wow animated fadeInLeft">
-							<form action="#" method="post">
+							<!--<form action="#" method="post">
 								<div class="input-field">
 									<input type="text" name="name" class="form-control" placeholder="Your Name...">
 								</div>
@@ -526,7 +528,13 @@ We work on behalf of property owner and deal directly with prospects and tenants
 								</div>
 						       	<button type="submit" id="submit" class="btn btn-blue btn-effect">Send</button>
 							</form>
-						</div>
+						</div>-->
+                            <form method="post" action="">
+                                {% csrf_token %}
+                                {{ form|crispy }}
+                               <button type="submit" id="submit" class="btn btn-blue btn-effect">Send</button>
+                            </form>
+        </div>
 						
 						<div class="col-md-5 wow animated fadeInRight">
 							<address class="contact-details">
