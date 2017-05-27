@@ -4,7 +4,7 @@
  * Licensed under MIT (https://github.com/BlackrockDigital/startbootstrap-sb-admin/blob/master/LICENSE)
  */
 body {
-  background: #292b2c; }
+  background: #fff; }
 
 body.fixed-nav {
   padding-top: 54px; }
@@ -135,7 +135,7 @@ body.fixed-nav {
     overflow: visible;
     max-height: none; }
     #mainNav .navbar-collapse .navbar-nav.sidebar-nav {
-      position: absolute;
+      position: fixed;
       top: 0;
       left: 0;
       overflow: auto;
@@ -191,4 +191,11 @@ body.fixed-nav {
     width: 32px;
     z-index: 0;
 }
-
+.navbar{
+  position: fixed;
+  width:100%;
+  z-index: 1;
+}
+.mrg-top-5{
+  margin-top:5%;
+}
