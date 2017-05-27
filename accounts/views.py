@@ -4,12 +4,17 @@ from django.contrib.auth import (
     login,
     logout,
 )
+from django.http import HttpResponse
 from django.shortcuts import render,redirect
+from django.http import HttpResponseRedirect
 from .forms import UserLoginForm
 
 
 def home(request):
-    return redirect('/account/login')
+    if request.user.is_authenticated:
+        return redirect('/account/dashboard')
+    else:
+        return redirect('/account/login')
 
 def login_view(request):
     print(request.user.is_authenticated())
@@ -20,9 +25,12 @@ def login_view(request):
         user = authenticate(username=username,password=password)
         login(request,user)
         print(request.user.is_authenticated())
-        #redirect('/account/dashboard')
+        return redirect('/account/dashboard')
     return render(request,'accounts/login.html',{"form":form})
 
 def logout_view(request):
     logout(request)
     return redirect('/account/login')
+
+def dashboard(request):
+    return render(request,'dashboard/dashboard.html',{})
