@@ -24,4 +24,4 @@ def index(request):
     context ={
             "form":form
         }
-    return render(request,"index.html",context)
+    return render(request, "core/index.html", context)
