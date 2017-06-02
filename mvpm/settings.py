@@ -44,10 +44,12 @@ INSTALLED_APPS = [
 
     'core',
     'accounts',
+    'promanage',
 
     #third party apps
 
     'crispy_forms',
+    'location_field',
 ]
 CRISPY_TEMPLATE_PACK = 'bootstrap3'
 
@@ -89,7 +91,7 @@ WSGI_APPLICATION = 'mvpm.wsgi.application'
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.mysql',
-        'NAME': 'mvpm',
+        'NAME': 'vizag',
         'HOST': '127.0.0.1',
         'PORT': '3306',
         'USER': 'root',
