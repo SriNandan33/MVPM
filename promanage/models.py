@@ -2,7 +2,6 @@ from django.db import models
 
 from django.db import models
 from django.contrib.auth.models import User
-from location_field.models.plain import PlainLocationField
 
 class Property(models.Model):
     user = models.ForeignKey(User)
@@ -24,7 +23,7 @@ class Property(models.Model):
         default='H'
     )
     city = models.CharField(max_length=50,blank=True)
-    location = PlainLocationField(based_fields=['city'],zoom=7)
+    location = models.CharField(max_length=50,blank=True)
     plan = models.CharField(
         max_length=1,
         choices=PLAN_CHOICES,

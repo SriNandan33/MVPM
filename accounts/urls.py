@@ -1,4 +1,4 @@
-from django.conf.urls import url
+from django.conf.urls import include,url
 from . import views
 
 urlpatterns=[
@@ -8,4 +8,5 @@ urlpatterns=[
     url(r'^dashboard/$',views.dashboard,name='dashboard'),
     url(r'dashboard/news_updates/$',views.newsupdates,name='newsupdates'),
     url(r'dashboard/billing/$',views.billing,name='billing'),
+    url(r'dashboard/manage_property/',include('promanage.urls'))
 ]
