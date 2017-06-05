@@ -4,10 +4,10 @@
 {% block content %}
 <h1>register your property here</h1>
     <div class="col-md-6 col-md-offset-8">
-        <form method="post" action="">
+        <form method="post" action="" enctype="multipart/form-data">
             {% csrf_token %}
             {{form|crispy  }}
-            <button class="btn btn-primary btn-block" type="submit" name="submit" value="Add_property">Proceed to payment</button>
+            <button class="btn btn-danger btn-block" type="submit" name="submit" value="Add_property">Proceed to payment</button>
         </form>
     </div>
     <br>
