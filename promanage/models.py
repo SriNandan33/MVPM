@@ -10,35 +10,35 @@ class Property(models.Model):
     user = models.ForeignKey(User,on_delete=models.CASCADE)
     proname = models.CharField('Name',max_length=50)
     PROPERTY_TYPE_CHOICES = (
-        ('H','HOUSE'),
-        ('L','LAND'),
-        ('A','APARTMENT'),
+        ('HOUSE','HOUSE'),
+        ('LAND','LAND'),
+        ('APARTMENT','APARTMENT'),
     )
     PLAN_CHOICES=(
-        ('S','SILVER'),
-        ('G', 'GOLD'),
-        ('D', 'DIAMOND'),
+        ('SILVER','SILVER'),
+        ('GOLD', 'GOLD'),
+        ('DIAMOND', 'DIAMOND'),
     )
     SERVICE_TYPE_CHOICES =(
-        ('RE','RENTAL'),
-        ('SA', 'SALE'),
-        ('MA', 'MAINTENANCE'),
-        ('CO', 'CONSTRUCTION'),
+        ('RENTAL','RENTAL'),
+        ('SALE', 'SALE'),
+        ('MAINTENANCE', 'MAINTENANCE'),
+        ('CONSTRUCTION', 'CONSTRUCTION'),
     )
     property_type = models.CharField(
-        max_length=1,
+        max_length=10,
         choices=PROPERTY_TYPE_CHOICES,
-        default='H'
+        default='HOUSE'
     )
     service_type = models.CharField(
-        max_length=2,
+        max_length=20,
         choices=SERVICE_TYPE_CHOICES,
-        default='MA'
+        default='MAINTENANCE'
     )
     plan = models.CharField(
-        max_length=1,
+        max_length=20,
         choices=PLAN_CHOICES,
-        default='S'
+        default='SILVER'
     )
     city = models.CharField(max_length=50)
     location = models.CharField(max_length=50)

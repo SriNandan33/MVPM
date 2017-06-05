@@ -1,0 +1,40 @@
+.snbs-example {
+    margin-right: 0;
+    margin-left: 0;
+    background-color: #fff;
+    border-color: #ddd;
+    border-width: 1px;
+    border-radius: 4px 4px 0 0;
+    -webkit-box-shadow: none;
+    box-shadow: none;
+}
+.snrow {
+    margin-right: -15px;
+    margin-left: -15px;
+}
+.sncol-md-4 {
+    width: 33.33333333%;
+}
+.snthumbnail {
+    display: block;
+    padding: 4px;
+    margin-bottom: 20px;
+    line-height: 1.42857143;
+    background-color: #fff;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    -webkit-transition: border .2s ease-in-out;
+    -o-transition: border .2s ease-in-out;
+    transition: border .2s ease-in-out;
+}
+.thimg {
+    height: 200px;
+    width: 100%;
+    display: block;
+    margin-right: auto;
+    margin-left: auto;
+}
+.snthumbnail .sncaption {
+    padding: 9px;
+    color: #333;
+}

@@ -1,6 +1,7 @@
 from django.shortcuts import render,redirect
 from .forms import PropertyForm
 from django.contrib.auth.decorators import login_required
+from .models import Property
 
 @login_required(login_url='/account/login/')
 def Property_register_view(request):
@@ -14,3 +15,7 @@ def Property_register_view(request):
 
     return render(request,'dashboard/registerpro.html',{'form':form})
 
+@login_required(login_url='/account/login/')
+def propertylist(request):
+    properties = Property.objects.filter(user=request.user)
+    return render(request,'dashboard/property_list.html',{'properties':properties})

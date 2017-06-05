@@ -9,13 +9,8 @@ from django.http import HttpResponse
 from django.shortcuts import render,redirect
 from django.http import HttpResponseRedirect
 from .forms import UserLoginForm
+from promanage.models import Property
 
-
-def home(request):
-    if request.user.is_authenticated:
-        return redirect('/account/dashboard')
-    else:
-        return redirect('/account/login')
 
 def login_view(request):
     print(request.user.is_authenticated())
@@ -35,6 +30,13 @@ def login_view(request):
 def logout_view(request):
     logout(request)
     return redirect('/account/login')
+
+def home(request):
+    if request.user.is_authenticated:
+        return redirect('/account/dashboard')
+    else:
+        return redirect('/account/login')
+
 
 @login_required(login_url='/account/login/')
 def dashboard(request):

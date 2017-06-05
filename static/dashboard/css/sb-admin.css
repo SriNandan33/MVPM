@@ -47,14 +47,15 @@ body.fixed-nav {
   z-index: 1; }
 
 .card-block-icon {
-  font-size: 9rem;
-  position: absolute;
-  z-index: 0;
-  /*top: -25px;
-  right: 155px;*/
-    top: 0%;
-    right: 30%;
- }
+    font-size: 5rem;
+    position: absolute;
+    z-index: 0;
+    top: -25px;
+    right: -25px;
+    -webkit-transform: rotate(15deg);
+    -ms-transform: rotate(15deg);
+    transform: rotate(15deg);
+}
 
 @media (min-width: 576px) {
   .card-columns {
@@ -179,12 +180,7 @@ body.fixed-nav {
     #mainNav .navbar-collapse .navbar-nav > .nav-item.dropdown .dropdown-menu > .dropdown-item > .dropdown-message {
       max-width: 300px; } }
 
-.h-100 {
-    height: 214%!important;
-}
-.mb-3 {
-    margin-bottom: 10rem!important;
-}
+
 .nv-img{
     border-radius: 50%;
     height: 32px;
