@@ -1,0 +1,13 @@
+{% extends 'dashboard/dashboard.html' %}
+{% load crispy_forms_tags %}
+{% block content %}
+    <h1>Profile</h1>
+    <div class="col-md-6">
+        <form method="post">
+            {% csrf_token %}
+            {{ user_form|crispy }}
+            {{ profile_form|crispy }}
+            <button type="submit" value="submit" class="btn btn-success btn-block">Save</button>
+        </form>
+    </div>
+{% endblock content %}

@@ -5,6 +5,7 @@ from django.contrib.auth import (
     login,
     logout,
 )
+from .models import UserProfile
 User = get_user_model()
 class UserLoginForm(forms.Form):
     username = forms.CharField(label="",
@@ -25,3 +26,13 @@ class UserLoginForm(forms.Form):
             if not user.is_active:
                 raise forms.ValidationError("This user no longer active.")
             return super(UserLoginForm,self).clean(*args,**kwargs)
+
+class UserForm(forms.ModelForm):
+    class Meta:
+        model = User
+        fields = ('first_name','last_name','email')
+
+class ProfileForm(forms.ModelForm):
+    class Meta:
+        model = UserProfile
+        exclude= ('user',)

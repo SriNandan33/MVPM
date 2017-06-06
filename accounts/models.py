@@ -5,9 +5,12 @@ from django.db.models.signals import post_save
 class UserProfile(models.Model):
     user = models.OneToOneField(User,on_delete=models.CASCADE)
     description = models.CharField(max_length=100,default="")
-    city = models.CharField(max_length=100,default="")
     email = models.EmailField()
-    phone = models.IntegerField(default=0)
+    phone = models.BigIntegerField(default=0)
+    country = models.CharField(max_length=50,null=True)
+    state = models.CharField(max_length=50,null=True)
+    city = models.CharField(max_length=100,null=True)
+    zipcode=models.IntegerField(default=0)
 
     def __str__(self):
         return self.user.username

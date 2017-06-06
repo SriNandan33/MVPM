@@ -8,7 +8,8 @@ from django.contrib.auth.decorators import login_required
 from django.http import HttpResponse
 from django.shortcuts import render,redirect
 from django.http import HttpResponseRedirect
-from .forms import UserLoginForm
+from .forms import UserLoginForm ,UserForm,ProfileForm
+from .models import UserProfile
 from promanage.models import Property
 
 
@@ -49,4 +50,24 @@ def newsupdates(request):
 @login_required(login_url='/account/login/')
 def billing(request):
     return render(request,'dashboard/billing.html',{})
+
+@login_required(login_url='/account/login/')
+def update_profile(request):
+    if request.method == 'POST':
+        user_form = UserForm(request.POST,instance=request.user)
+        profle_form = ProfileForm(request.POST,instance=request.user.userprofile)
+        if user_form.is_valid() and profle_form.is_valid():
+            user_form.save()
+            profle_form.save()
+            print("updated")
+            #return redirect()
+        else:
+            print("not updated")
+    else:
+        user_form = UserForm(instance=request.user)
+        profle_form = ProfileForm(instance=request.user.userprofile)
+    return render(request,'dashboard/profile.html',{
+        'user_form':user_form,
+        'profile_form':profle_form
+    })
 

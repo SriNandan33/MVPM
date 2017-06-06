@@ -8,5 +8,6 @@ urlpatterns=[
     url(r'^dashboard/$',views.dashboard,name='dashboard'),
     url(r'dashboard/news_updates/$',views.newsupdates,name='newsupdates'),
     url(r'dashboard/billing/$',views.billing,name='billing'),
+    url(r'dashboard/profile/$',views.update_profile,name='update_profile'),
     url(r'dashboard/manage_property/',include('promanage.urls'))
 ]
