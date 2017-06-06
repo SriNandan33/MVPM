@@ -2,8 +2,12 @@ from django.db import models
 from django.contrib.auth.models import User
 from django.db.models.signals import post_save
 
+
+def upload_location(instance, filename):
+    return "%s/avatar/%s" % (instance.user, filename)
 class UserProfile(models.Model):
     user = models.OneToOneField(User,on_delete=models.CASCADE)
+    avatar = models.ImageField(upload_to=upload_location,null=True,blank=True)
     description = models.CharField(max_length=100,default="")
     email = models.EmailField()
     phone = models.BigIntegerField(default=0)

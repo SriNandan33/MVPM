@@ -5,7 +5,6 @@ from django.contrib.auth.models import User
 
 def upload_location(instance, filename):
     return "%s/thumbnail/%s" % (instance.user, filename)
-
 class Property(models.Model):
     user = models.ForeignKey(User,on_delete=models.CASCADE)
     proname = models.CharField('Name',max_length=50)

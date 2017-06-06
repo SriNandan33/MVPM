@@ -67,6 +67,7 @@ def update_profile(request):
         user_form = UserForm(instance=request.user)
         profle_form = ProfileForm(instance=request.user.userprofile)
     return render(request,'dashboard/profile.html',{
+        'user':request.user,
         'user_form':user_form,
         'profile_form':profle_form
     })

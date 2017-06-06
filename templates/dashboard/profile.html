@@ -2,12 +2,17 @@
 {% load crispy_forms_tags %}
 {% block content %}
     <h1>Profile</h1>
-    <div class="col-md-6">
-        <form method="post">
-            {% csrf_token %}
-            {{ user_form|crispy }}
-            {{ profile_form|crispy }}
-            <button type="submit" value="submit" class="btn btn-success btn-block">Save</button>
-        </form>
+    <div class="row">
+        <div class="col-md-6">
+            <form method="post">
+                {% csrf_token %}
+                {{ user_form|crispy }}
+                {{ profile_form|crispy }}
+                <button type="submit" value="submit" class="btn btn-success btn-block">Save</button>
+            </form>
+        </div>
+        <div class ="col-md-4">
+            <img src="{{ user.userprofile.avatar.url }}" class="img-responsive" width="100%"/>
+        </div>
     </div>
 {% endblock content %}
