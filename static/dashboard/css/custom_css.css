@@ -42,3 +42,15 @@
     color: grey;
     font-size: small;
 }
+.avatar {
+    border-radius: 6px;
+    height: 230;
+    width: 100%;
+    z-index: 0;
+}
+.col-3 {
+    width: 25%;
+}
+.pos-fix{
+    position:fixed;
+}

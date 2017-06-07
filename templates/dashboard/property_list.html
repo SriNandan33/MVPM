@@ -2,8 +2,12 @@
 
 {% extends 'dashboard/dashboard.html' %}
 {% block content %}
+    <div class="card mb-3">
+        <div class="card-header">
+            <i class="fa fa-university"></i> Properties
+        </div>
     <div class="bs-example">
-        <div class="row">
+        <div class="row" style="margin:5px">
     {% for obj in properties %}
 
             <div class="col-md-4">
@@ -19,5 +23,6 @@
             </div>
     {% endfor %}
         </div>
+    </div>
     </div>
 {% endblock content %}

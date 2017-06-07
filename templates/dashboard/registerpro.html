@@ -2,7 +2,10 @@
 {% load crispy_forms_tags %}
 
 {% block content %}
-<h1>register your property here</h1>
+     <div class="card mb-3">
+        <div class="card-header">
+            <i class="fa fa-home"></i> Register Your Property Here
+        </div>
     <div class="col-md-6 col-md-offset-8">
         <form method="post" action="" enctype="multipart/form-data">
             {% csrf_token %}
@@ -10,6 +13,5 @@
             <button class="btn btn-danger btn-block" type="submit" name="submit" value="Add_property">Proceed to payment</button>
         </form>
     </div>
-    <br>
-    <br>
+     </div>
 {% endblock content %}

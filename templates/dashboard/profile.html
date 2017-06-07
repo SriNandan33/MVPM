@@ -1,8 +1,15 @@
 {% extends 'dashboard/dashboard.html' %}
 {% load crispy_forms_tags %}
 {% block content %}
-    <h1>Profile</h1>
-    <div class="row">
+    <div class="card mb-3">
+        <div class="card-header">
+            <i class="fa fa-user"></i> Profile
+        </div>
+
+    <div class="row" style="margin-top: 2%">
+        <div class ="col-3" style="margin-left:1%">
+            <img src="{{ user.userprofile.avatar.url }}" class="img-responsive avatar" width="100%"/>
+        </div>
         <div class="col-md-6">
             <form method="post">
                 {% csrf_token %}
@@ -11,8 +18,6 @@
                 <button type="submit" value="submit" class="btn btn-success btn-block">Save</button>
             </form>
         </div>
-        <div class ="col-md-4">
-            <img src="{{ user.userprofile.avatar.url }}" class="img-responsive" width="100%"/>
-        </div>
+    </div>
     </div>
 {% endblock content %}
