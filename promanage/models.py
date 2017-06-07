@@ -43,5 +43,6 @@ class Property(models.Model):
     location = models.CharField(max_length=50)
     address = models.TextField(blank=True)
     thumbnail = models.ImageField(upload_to=upload_location, null=True)
+    date = models.DateTimeField(auto_now=True,auto_now_add=False)
     def __str__(self):
             return self.user.username

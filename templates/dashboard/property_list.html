@@ -11,11 +11,10 @@
                     {% if obj.thumbnail %}
                          <img src='{{ obj.thumbnail.url }}' class="img-responsive" style="width: 100%;height: 225px" />
                     {% endif %}
-                    <div class="card-title mb-1">
+                    <div class="card-title mb-1" style="font-size: large">
                         {{ obj.proname }}
                     </div>
-                        {{ obj.plan }}
-                        {{ obj.service_type }}
+                    <p class="proinfo" style=""> {{ obj.property_type }} | {{ obj.service_type }} | {{ obj.plan }} | {{ obj.date.date }} </p>
                 </div>
             </div>
     {% endfor %}
