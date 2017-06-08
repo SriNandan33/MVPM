@@ -1,5 +1,6 @@
 
 {% load staticfiles %}
+{% load accounts_extras %}
 <!DOCTYPE html>
 <html lang="en">
 
@@ -66,8 +67,9 @@
             <ul class="navbar-nav ml-auto">
                 <li class="nav-item dropdown">
                     <a class="nav-link dropdown-toggle mr-lg-2" href="#" id="messagesDropdown" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                        <i class="fa fa-fw fa-envelope"></i> <span class="hidden-lg-up">Messages <span class="badge badge-pill badge-primary">12 New</span></span>
-                        <span class="new-indicator text-primary hidden-md-down"><i class="fa fa-fw fa-circle"></i><span class="number">12</span></span>
+                        {% unread_notifications as unread_count %}
+                        <i class="fa fa-fw fa-envelope"></i> <span class="hidden-lg-up">Messages <span class="badge badge-pill badge-primary">{{ unread_count }} New</span></span>
+                        <span class="new-indicator text-primary hidden-md-down"><i class="fa fa-fw fa-circle"></i><span class="number">{{ unread_count }}</span></span>
                     </a>
                     <div class="dropdown-menu dropdown-menu-right" aria-labelledby="messagesDropdown">
                         <a href="#" style="text-decoration: none"><h6 class="card-header"> See All Notifications   <i class="fa fa-chevron-circle-right" aria-hidden="true"></i> </h6></a>

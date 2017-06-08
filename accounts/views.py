@@ -41,12 +41,22 @@ def home(request):
 
 @login_required(login_url='/account/login/')
 def dashboard(request):
-    return render(request,'dashboard/dashboard.html',{})
+    context = {
+        'user':request.user,
+    }
+    return render(request,'dashboard/dashboard.html',context)
 
 @login_required(login_url='/account/login/')
 def all_notifications(request):
-    notifications = Notification.objects.filter(to_user =request.user,is_read=False)
-    return render(request,'dashboard/notifications.html',{'notifications':notifications})
+    notifications = Notification.objects.filter(to_user =request.user)
+    unread_notifications = Notification.objects.filter(to_user=request.user,is_read=False)
+    count = len(unread_notifications)
+    context={
+        'notifications': notifications,
+        'count': count,
+        'user':request.user
+    }
+    return render(request,'dashboard/notifications.html',context)
 
 @login_required(login_url='/account/login/')
 def newsupdates(request):

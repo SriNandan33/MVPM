@@ -115,7 +115,7 @@ body.fixed-nav {
       top: 0;
       right: 25px; }
       #mainNav .navbar-collapse .navbar-nav > .nav-item.dropdown > .nav-link .new-indicator .number {
-        font-size: .5rem;
+        font-size: .7rem;
         position: absolute;
         top: 6px;
         left: 0;
