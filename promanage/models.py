@@ -43,6 +43,25 @@ class Property(models.Model):
     location = models.CharField(max_length=50)
     address = models.TextField(blank=True)
     thumbnail = models.ImageField(upload_to=upload_location, null=True)
-    date = models.DateTimeField(auto_now=True,auto_now_add=False)
+    date = models.DateTimeField(auto_now_add=True)
+
+    class Meta:
+        verbose_name = 'Property'
+        verbose_name_plural = 'Properties'
     def __str__(self):
             return self.user.username
+
+class Notification(models.Model):
+    to_user = models.ForeignKey(User,on_delete=models.CASCADE)
+    title = models.CharField(max_length=250)
+    content = models.TextField('content')
+    date = models.DateTimeField(auto_now_add=True)
+    is_read = models.BooleanField(default=False)
+
+    class Meta :
+        verbose_name = 'Notification'
+        verbose_name_plural = 'Notifications'
+        ordering = ('-date',)
+
+    def __str__(self):
+        return self.to_user.username

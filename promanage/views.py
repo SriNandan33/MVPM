@@ -1,7 +1,7 @@
 from django.shortcuts import render,redirect
 from .forms import PropertyForm
 from django.contrib.auth.decorators import login_required
-from .models import Property
+from .models import Property,Notification
 
 @login_required(login_url='/account/login/')
 def Property_register_view(request):

@@ -10,7 +10,7 @@ from django.shortcuts import render,redirect
 from django.http import HttpResponseRedirect
 from .forms import UserLoginForm ,UserForm,ProfileForm
 from .models import UserProfile
-from promanage.models import Property
+from promanage.models import Property,Notification
 
 
 def login_view(request):
@@ -42,6 +42,11 @@ def home(request):
 @login_required(login_url='/account/login/')
 def dashboard(request):
     return render(request,'dashboard/dashboard.html',{})
+
+@login_required(login_url='/account/login/')
+def all_notifications(request):
+    notifications = Notification.objects.filter(to_user =request.user,is_read=False)
+    return render(request,'dashboard/notifications.html',{'notifications':notifications})
 
 @login_required(login_url='/account/login/')
 def newsupdates(request):
