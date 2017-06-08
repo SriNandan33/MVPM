@@ -5,6 +5,7 @@ from django.contrib.auth import (
     login,
     logout,
 )
+from django.contrib.auth.forms import PasswordChangeForm
 from .models import UserProfile
 User = get_user_model()
 class UserLoginForm(forms.Form):
@@ -27,6 +28,7 @@ class UserLoginForm(forms.Form):
                 raise forms.ValidationError("This user no longer active.")
             return super(UserLoginForm,self).clean(*args,**kwargs)
 
+#updateprofileform = UserForm + ProfileForm
 class UserForm(forms.ModelForm):
     class Meta:
         model = User

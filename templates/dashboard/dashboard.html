@@ -52,7 +52,7 @@
                     <a class="nav-link" href="/account/dashboard/billing"><i class="fa fa-fw fa-cc-visa"></i> Bills & Payments</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="#"><i class="fa fa-fw fa-envelope"></i> Alerts</a>
+                    <a class="nav-link" href="/account/dashboard/notifications"><i class="fa fa-fw fa-envelope"></i> Notifications</a>
                 </li>
                 <li class="nav-item">
                     <a class="nav-link" href="/account/dashboard/news_updates"><i class="fa fa-fw fa-bell"></i> News & Updates </a>
@@ -61,13 +61,13 @@
                     <a class="nav-link" href="/account/dashboard/profile"><i class="fa fa-fw fa-user-circle"></i> Profile </a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="#"><i class="fa fa-fw fa-key"></i>Change Password </a>
+                    <a class="nav-link" href="/account/dashboard/change_password"><i class="fa fa-fw fa-key"></i>Change Password </a>
                 </li>
             </ul>
             <ul class="navbar-nav ml-auto">
                 <li class="nav-item dropdown">
                     <a class="nav-link dropdown-toggle mr-lg-2" href="#" id="messagesDropdown" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                        {% unread_notifications as unread_count %}
+                        {% unread_notifications as unread_count  %}
                         <i class="fa fa-fw fa-envelope"></i> <span class="hidden-lg-up">Messages <span class="badge badge-pill badge-primary">{{ unread_count }} New</span></span>
                         <span class="new-indicator text-primary hidden-md-down"><i class="fa fa-fw fa-circle"></i><span class="number">{{ unread_count }}</span></span>
                     </a>
@@ -120,7 +120,7 @@
                                 <i class="fa fa-fw fa-university"></i>
                             </div>
                             <div class="mr-5">
-                                12 Properties
+                                {{ pro_count }} Properties
                             </div>
                         </div>
                         <a href="/account/dashboard/manage_property/properties/" class="card-footer clearfix small z-1">
@@ -136,10 +136,10 @@
                                 <i class="fa fa-fw fa-envelope"></i>
                             </div>
                             <div class="mr-5">
-                                12 alerts
+                                {{ unread_count }} Notifications
                             </div>
                         </div>
-                        <a href="#" class="card-footer clearfix small z-1">
+                        <a href="/account/dashboard/notifications/" class="card-footer clearfix small z-1">
                             <span class="float-left">View Details</span>
                             <span class="float-right"><i class="fa fa-angle-right"></i></span>
                         </a>

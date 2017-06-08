@@ -3,8 +3,10 @@ from django.contrib.auth import (
     get_user_model,
     login,
     logout,
+    update_session_auth_hash,
 )
 from django.contrib.auth.decorators import login_required
+from django.contrib.auth.forms import PasswordChangeForm
 from django.http import HttpResponse
 from django.shortcuts import render,redirect
 from django.http import HttpResponseRedirect
@@ -41,8 +43,10 @@ def home(request):
 
 @login_required(login_url='/account/login/')
 def dashboard(request):
+    pro_count = Property.objects.filter(user=request.user).count()
     context = {
         'user':request.user,
+        'pro_count':pro_count
     }
     return render(request,'dashboard/dashboard.html',context)
 
@@ -86,4 +90,18 @@ def update_profile(request):
         'user_form':user_form,
         'profile_form':profle_form
     })
-
+def change_password(request):
+    if request.method == 'POST':
+        form = PasswordChangeForm(request.user,request.POST)
+        form.new_password1.help_text=''
+        if form.is_valid():
+            user = form.save()
+            update_session_auth_hash(request,user)
+            return redirect('accounts:change_password')
+    else:
+        form = PasswordChangeForm(request.user)
+    context ={
+        'form':form,
+        'user':request.user,
+    }
+    return render(request,'dashboard/change_password.html',context)

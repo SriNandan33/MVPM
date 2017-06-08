@@ -10,12 +10,12 @@
         <div class ="col-3" style="margin-left:1%">
             <img src="{{ user.userprofile.avatar.url }}" class="img-responsive avatar" width="100%"/>
         </div>
-        <div class="col-md-6">
+        <div class="col-md-6 mywell">
             <form method="post">
                 {% csrf_token %}
                 {{ user_form|crispy }}
                 {{ profile_form|crispy }}
-                <button type="submit" value="submit" class="btn btn-success btn-block">Save</button>
+                <button type="submit" value="submit" class="btn btn-danger btn-block">Save</button>
             </form>
         </div>
     </div>
