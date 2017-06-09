@@ -1,3 +1,4 @@
+from django.contrib import messages
 from django.contrib.auth import (
     authenticate,
     get_user_model,
@@ -24,7 +25,7 @@ def login_view(request):
         password = form.cleaned_data.get("password")
         user = authenticate(username=username,password=password)
         login(request,user)
-        print(request.user.is_authenticated())
+        messages.success(request,"Login Successful")
         if next:
             return redirect(next)
         return redirect('/account/dashboard')
@@ -32,6 +33,7 @@ def login_view(request):
 
 def logout_view(request):
     logout(request)
+    messages.success(request,"Logout Successful.")
     return redirect('/account/login')
 
 def home(request):
@@ -78,10 +80,9 @@ def update_profile(request):
         if user_form.is_valid() and profle_form.is_valid():
             user_form.save()
             profle_form.save()
-            print("updated")
-            #return redirect()
+            messages.success(request,"Profile Updated Successfully")
         else:
-            print("not updated")
+            messages.error(request,"Error Updating Profile")
     else:
         user_form = UserForm(instance=request.user)
         profle_form = ProfileForm(instance=request.user.userprofile)
@@ -96,7 +97,10 @@ def change_password(request):
         if form.is_valid():
             user = form.save()
             update_session_auth_hash(request,user)
+            messages.success(request,"Password successfully updated. Please Login again")
             return redirect('/account/login')
+        else:
+            messages.error(request,"Error Changing the password. Please Try again")
     else:
         form = PasswordChangeForm(request.user)
     context ={

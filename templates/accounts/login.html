@@ -41,6 +41,15 @@
             <div class="inner-bg">
                 <div class="container">
                     <div class="row">
+                        <div class="col-sm-6 col-sm-offset-3">
+                            {% for message in messages %}
+                                <div class="alert alert-{{ message.tags }} alert-dismissible" role="alert">
+                                    <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                                        <span aria-hidden="true">&times;</span>
+                                    </button>
+                                    <strong> {{ message }}</strong> </div>
+                            {% endfor %}
+                        </div>
                         <div class="col-sm-6 col-sm-offset-3 form-box">
                         	<div class="form-top">
                         		<div class="form-top-left">
