@@ -1,5 +1,6 @@
 from django.shortcuts import render,redirect
 from .forms import PropertyForm
+from django.contrib import messages
 from django.contrib.auth.decorators import login_required
 from .models import Property,Notification
 
@@ -11,11 +12,11 @@ def Property_register_view(request):
         instance = form.save(commit=False)
         instance.user = request.user
         instance.save()
-        return redirect('/account/dashboard')
-
+        messages.success(request,"Property Registered successfully")
+        return redirect('/account/dashboard/manage_property/properties/')
     return render(request,'dashboard/registerpro.html',{'form':form})
 
 @login_required(login_url='/account/login/')
 def propertylist(request):
-    properties = Property.objects.filter(user=request.user)
+    properties = Property.objects.filter(user=request.user).order_by('-date')
     return render(request,'dashboard/property_list.html',{'properties':properties})
