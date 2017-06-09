@@ -53,11 +53,12 @@ def dashboard(request):
 
 @login_required(login_url='/account/login/')
 def all_notifications(request):
-    notifications = Notification.objects.filter(to_user =request.user)
-    unread_notifications = Notification.objects.filter(to_user=request.user,is_read=False)
+    unread_notifications = Notification.objects.filter(to_user=request.user, is_read=False)
+    read_notifications = Notification.objects.filter(to_user=request.user, is_read=True)
     count = len(unread_notifications)
     context={
-        'notifications': notifications,
+        'unread_notifications':unread_notifications,
+        'read_notifications': read_notifications,
         'count': count,
         'user':request.user
     }

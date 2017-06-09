@@ -14,13 +14,25 @@
                         </div>
 
                         <div class="list-group list-group-flush small">
-                            {% for i in notifications %}
+                            {% for i in unread_notifications %}
+                            <a href="#" class="list-group-item list-group-item-action">
+
+                                <div class="media">
+                                    <div class="media-body">
+                                        <i class="fa fa-circle" aria-hidden="true" style="font-size:0.5rem;color: #00cc00"></i><strong> {{ i.title }}</strong>
+                                        <p>{{ i.content }}</p>
+                                        <div class="text-muted smaller">{{ i.date | naturaltime}}</div>
+                                    </div>
+                                </div>
+                            </a>
+                            {% endfor %}
+                            {% for j in read_notifications %}
                             <a href="#" class="list-group-item list-group-item-action">
                                 <div class="media">
                                     <div class="media-body">
-                                        <strong>{{ i.title }}</strong>
-                                        <p>{{ i.content }}</p>
-                                        <div class="text-muted smaller">{{ i.date | naturaltime}}</div>
+                                        <strong> {{ j.title }}</strong>
+                                        <p>{{ j.content }}</p>
+                                        <div class="text-muted smaller">{{ j.date | naturaltime}}</div>
                                     </div>
                                 </div>
                             </a>
