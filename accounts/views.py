@@ -93,11 +93,10 @@ def update_profile(request):
 def change_password(request):
     if request.method == 'POST':
         form = PasswordChangeForm(request.user,request.POST)
-        form.new_password1.help_text=''
         if form.is_valid():
             user = form.save()
             update_session_auth_hash(request,user)
-            return redirect('accounts:change_password')
+            return redirect('/account/login')
     else:
         form = PasswordChangeForm(request.user)
     context ={
