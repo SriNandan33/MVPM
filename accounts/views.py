@@ -17,7 +17,6 @@ from promanage.models import Property,Notification
 
 
 def login_view(request):
-    print(request.user.is_authenticated())
     next = request.GET.get('next') #incase of login required
     form = UserLoginForm(request.POST or None)
     if form.is_valid():
