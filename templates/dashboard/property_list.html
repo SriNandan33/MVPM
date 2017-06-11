@@ -22,7 +22,7 @@
             <div class="col-md-4">
                 <div class="snthumbnail">
                     {% if obj.thumbnail %}
-                         <img src='{{ obj.thumbnail.url }}' class="img-responsive" style="width: 100%;height: 225px" />
+                        <a href="/account/dashboard/manage_property/properties/{{ obj.id }}"> <img src='{{ obj.thumbnail.url }}' class="img-responsive" style="width: 100%;height: 225px" /></a>
                     {% endif %}
                     <div class="card-title mb-1" style="font-size: large">
                         {{ obj.proname }}

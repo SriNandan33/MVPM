@@ -1,4 +1,4 @@
-from django.shortcuts import render,redirect
+from django.shortcuts import render,redirect,get_object_or_404
 from .forms import PropertyForm
 from django.contrib import messages
 from django.contrib.auth.decorators import login_required
@@ -20,3 +20,10 @@ def Property_register_view(request):
 def propertylist(request):
     properties = Property.objects.filter(user=request.user).order_by('-date')
     return render(request,'dashboard/property_list.html',{'properties':properties})
+
+def property_detail(request,id=None):
+    instance = get_object_or_404(Property,id=id)
+    context={
+        'instance':instance
+    }
+    return render(request,'dashboard/property_detail.html',context)
