@@ -63,6 +63,13 @@ def all_notifications(request):
         'user':request.user
     }
     return render(request,'dashboard/notifications.html',context)
+def mark_all_as_read(request):
+   unread_notifications = Notification.objects.filter(to_user=request.user,is_read=False)
+   for obj in unread_notifications:
+       obj.is_read = True
+       obj.save()
+
+   return redirect('/account/dashboard/notifications')
 
 @login_required(login_url='/account/login/')
 def newsupdates(request):
