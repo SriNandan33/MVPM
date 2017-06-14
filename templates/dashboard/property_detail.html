@@ -3,13 +3,14 @@
     <div class="card mb-3">
         <div class="card-header">
             <i class="fa fa-university"></i> {{ instance.proname }}
+            <a style="float: right;text-decoration: none" href="/account/dashboard/manage_property/properties/{{ instance.id }}/post_issue">Maintenance Request</a>
         </div>
         <div>
             <div class="row">
                 <div class="col-md-4">
                     <img src="{{ instance.thumbnail.url }}" style="width: 100%;height: 225px; margin-top: 3%" class="img-thumbnail">
                 </div>
-                <br class="col-md-6">
+                <div class="col-md-6">
                     Property Name: {{ instance.proname }}<br />
                     Type: {{ instance.property_type }}<br />
                     Service: {{ instance.service_type }}<br />

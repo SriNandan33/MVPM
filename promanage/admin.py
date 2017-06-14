@@ -1,5 +1,6 @@
 from django.contrib import admin
-from .models import Property,Notification
+from . import models
 
-admin.site.register(Property)
-admin.site.register(Notification)
+admin.site.register(models.Property)
+admin.site.register(models.Notification)
+admin.site.register(models.MaintenanceRequest)

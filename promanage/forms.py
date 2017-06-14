@@ -1,6 +1,6 @@
 from django import forms
 from django.contrib.auth.models import User
-from .models import Property
+from .models import Property,MaintenanceRequest
 
 class PropertyForm(forms.ModelForm):
 
@@ -19,3 +19,8 @@ class PropertyForm(forms.ModelForm):
                 attrs={'class': 'form-control', 'placeholder': '(optional)eg:1-146,opp:SBI..etc','rows':4,'columns':5}),
             'plan': forms.Select(attrs={'class': 'form-control'}),
         }
+
+class MaintenanceRequestForm(forms.ModelForm):
+    class Meta:
+        model = MaintenanceRequest
+        exclude=['user','property','is_serviced']

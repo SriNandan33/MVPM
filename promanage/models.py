@@ -49,7 +49,18 @@ class Property(models.Model):
         verbose_name = 'Property'
         verbose_name_plural = 'Properties'
     def __str__(self):
-            return self.user.username
+            return self.proname
+
+class MaintenanceRequest(models.Model):
+    user = models.ForeignKey(User,on_delete=models.CASCADE)
+    property = models.ForeignKey(Property,on_delete=models.CASCADE)
+    issue_title = models.CharField(max_length=50,null=True)
+    describe_issue = models.TextField('Describe Issue',null=True)
+    date = models.DateTimeField(auto_now_add=True)
+    is_serviced = models.BooleanField(default=False)
+
+    def __str__(self):
+        return self.property.proname
 
 class Notification(models.Model):
     to_user = models.ForeignKey(User,on_delete=models.CASCADE)

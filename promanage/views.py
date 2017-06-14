@@ -1,8 +1,8 @@
 from django.shortcuts import render,redirect,get_object_or_404
-from .forms import PropertyForm
 from django.contrib import messages
 from django.contrib.auth.decorators import login_required
 from .models import Property,Notification
+from .forms import PropertyForm,MaintenanceRequestForm
 
 @login_required(login_url='/account/login/')
 def Property_register_view(request):
@@ -27,3 +27,18 @@ def property_detail(request,id=None):
         'instance':instance
     }
     return render(request,'dashboard/property_detail.html',context)
+
+def maintenace_request(request,id=None):
+    property_instance = get_object_or_404(Property,id = id)
+    form = MaintenanceRequestForm(request.POST or None)
+    if form.is_valid():
+        form_instance = form.save(commit=False)
+        form_instance.user =request.user
+        form_instance.property = property_instance
+        form_instance.save()
+        messages.success(request, "Maintenance Request Successful")
+        return redirect('/account/dashboard/manage_property/properties/')
+    context={
+        'form':form
+    }
+    return render(request,'dashboard/maintenance_request.html',context)
