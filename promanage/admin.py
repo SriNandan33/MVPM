@@ -9,7 +9,14 @@ class PropertyAdmin(admin.ModelAdmin):
         model = models.Property
 
 admin.site.register(models.Property,PropertyAdmin)
-admin.site.register(models.Notification)
+
+class NotificationAdmin(admin.ModelAdmin):
+    list_display = ["to_user","title","is_read"]
+    list_filter = ["is_read"]
+    search_fields = ['to_user__username']
+    class Meta:
+        model = models.Notification
+admin.site.register(models.Notification,NotificationAdmin)
 
 class MaintenanceRequestAdmin(admin.ModelAdmin):
     list_display = ["user","issue_title","is_serviced"]
