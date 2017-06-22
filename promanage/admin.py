@@ -1,7 +1,14 @@
 from django.contrib import admin
 from . import models
 
-admin.site.register(models.Property)
+class PropertyAdmin(admin.ModelAdmin):
+    list_display = ["proname","user","property_type","plan","service_type"]
+    list_filter = ["service_type","plan","property_type"]
+    search_fields = ["user__username","proname"]
+    class Meta:
+        model = models.Property
+
+admin.site.register(models.Property,PropertyAdmin)
 admin.site.register(models.Notification)
 
 class MaintenanceRequestAdmin(admin.ModelAdmin):
