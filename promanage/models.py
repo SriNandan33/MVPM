@@ -53,7 +53,7 @@ class Property(models.Model):
 class RentalProperty(models.Model):
     user = models.ForeignKey(User,on_delete=models.CASCADE)
     property = models.ForeignKey(Property,on_delete=models.CASCADE)
-    rent_amount = models.IntegerField(default=0,null=True)
+    rent_amount = models.IntegerField(default=0)
     class Meta:
         verbose_name = 'RentalProperty'
         verbose_name_plural = 'RentalProperties'
