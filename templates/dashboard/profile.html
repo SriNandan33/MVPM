@@ -20,7 +20,7 @@
             <img src="{{ user.userprofile.avatar.url }}" class="img-responsive avatar" width="100%"/>
         </div>
         <div class="col-md-6 mywell">
-            <form method="post">
+            <form enctype="multipart/form-data" method="post">
                 {% csrf_token %}
                 {{ user_form|crispy }}
                 {{ profile_form|crispy }}
