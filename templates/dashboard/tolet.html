@@ -1,0 +1,17 @@
+{% extends 'dashboard/dashboard.html' %}
+{% load crispy_forms_tags %}
+
+{% block content %}
+     <div class="card mb-3">
+            <div class="card-header">
+                <i class="fa fa-exclamation-triangle"></i> To-Let
+            </div>
+            <div class="col-md-6 mywell">
+               <form action="" method="post">
+                {% csrf_token %}
+                {{ form|crispy}}
+                   <button type="submit" class="btn btn-danger btn-block" value="submit"><i class="fa fa-paper-plane"></i> To-let</button>
+               </form>
+            </div>
+     </div>
+{% endblock content %}

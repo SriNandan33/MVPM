@@ -3,22 +3,31 @@
     <div class="card mb-3">
         <div class="card-header">
             <i class="fa fa-university"></i> {{ instance.proname }}
-            <a style="float: right;text-decoration: none" href="/account/dashboard/manage_property/properties/{{ instance.id }}/post_issue">Maintenance Request</a>
+                <div style="float: right">
+                {% if instance.service_type == "RENTAL" %}
+                    <a  style="text-decoration: none" href="/account/dashboard/manage_property/properties/{{ instance.id }}/to_let" >To-Let</a><span style="color: #2b669a;"> | </span>
+                        {% endif %}
+                        <a   style="text-decoration: none;" href="/account/dashboard/manage_property/properties/{{ instance.id }}/post_issue">Maintenance Request</a>
+                </div>
+
+
         </div>
         <div>
             <div class="row">
                 <div class="col-md-4">
                     <img src="{{ instance.thumbnail.url }}" style="width: 100%;height: 225px; margin-top: 3%" class="img-thumbnail">
                 </div>
-                <div class="col-md-6">
+                <div class="col-md-4">
                     <table>
-                        <tr><th>Property Name:</th><td> {{ instance.proname }}</td></tr>
+                        <tr><th>Name:</th><td> {{ instance.proname }}</td></tr>
                         <tr><th>Type:</th> <td>{{ instance.property_type }}</td></tr>
                         <tr><th>Service:</th> <td>{{ instance.service_type }}</td></tr>
                         <tr><th>Plan :</th><td>{{ instance.plan }}</td></tr>
                         <tr><th>Address:</th><td> {{ instance.address }}, {{ instance.location }}, {{ instance.city }}</td></tr>
                         <tr><th>Date:</th><td> {{ instance.date }}</td></tr>
+
                     </table>
+
                 </div>
         </div>
     </div>

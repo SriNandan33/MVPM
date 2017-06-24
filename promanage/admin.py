@@ -10,6 +10,14 @@ class PropertyAdmin(admin.ModelAdmin):
 
 admin.site.register(models.Property,PropertyAdmin)
 
+class RentalAdmin(admin.ModelAdmin):
+    list_display = ["user","rent_amount"]
+    search_fields = ["user_username",]
+    class Meta:
+        model= models.RentalProperty
+
+admin.site.register(models.RentalProperty,RentalAdmin)
+
 class NotificationAdmin(admin.ModelAdmin):
     list_display = ["to_user","title","is_read"]
     list_filter = ["is_read"]

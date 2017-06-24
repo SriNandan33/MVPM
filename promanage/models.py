@@ -50,6 +50,16 @@ class Property(models.Model):
         verbose_name_plural = 'Properties'
     def __str__(self):
             return self.proname
+class RentalProperty(models.Model):
+    user = models.ForeignKey(User,on_delete=models.CASCADE)
+    property = models.ForeignKey(Property,on_delete=models.CASCADE)
+    rent_amount = models.IntegerField(default=0,null=True)
+    class Meta:
+        verbose_name = 'RentalProperty'
+        verbose_name_plural = 'RentalProperties'
+
+    def __str__(self):
+        return self.property.proname
 
 class MaintenanceRequest(models.Model):
     user = models.ForeignKey(User,on_delete=models.CASCADE)

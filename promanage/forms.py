@@ -1,6 +1,6 @@
 from django import forms
 from django.contrib.auth.models import User
-from .models import Property,MaintenanceRequest
+from .models import Property,MaintenanceRequest,RentalProperty
 
 class PropertyForm(forms.ModelForm):
 
@@ -24,3 +24,7 @@ class MaintenanceRequestForm(forms.ModelForm):
     class Meta:
         model = MaintenanceRequest
         exclude=['user','property','is_serviced']
+class ToLetForm(forms.ModelForm):
+    class Meta:
+        model = RentalProperty
+        fields = ['rent_amount',]
