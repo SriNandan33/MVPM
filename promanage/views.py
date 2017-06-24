@@ -21,13 +21,14 @@ def propertylist(request):
     properties = Property.objects.filter(user=request.user).order_by('-date')
     return render(request,'dashboard/property_list.html',{'properties':properties})
 
+@login_required(login_url='/account/login/')
 def property_detail(request,id=None):
     instance = get_object_or_404(Property,id=id)
     context={
         'instance':instance
     }
     return render(request,'dashboard/property_detail.html',context)
-
+@login_required(login_url='/account/login/')
 def maintenace_request(request,id=None):
     property_instance = get_object_or_404(Property,id = id)
     form = MaintenanceRequestForm(request.POST or None)
@@ -42,7 +43,7 @@ def maintenace_request(request,id=None):
         'form':form
     }
     return render(request,'dashboard/maintenance_request.html',context)
-
+@login_required(login_url='/account/login/')
 def to_let_view(request,id = None):
     property_instance = get_object_or_404(Property,id = id)
     form = ToLetForm(request.POST or None)

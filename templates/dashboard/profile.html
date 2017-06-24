@@ -17,7 +17,9 @@
 
     <div class="row" style="margin-top: 2%">
         <div class ="col-3" style="margin-left:1%">
-            <img src="{{ user.userprofile.avatar.url }}" class="img-responsive avatar" width="100%"/>
+            {% if user.userprofile.avatar %}
+                <img src="{{ user.userprofile.avatar.url }}" class="img-responsive avatar" width="100%"/>
+            {% endif %}
         </div>
         <div class="col-md-6 mywell">
             <form enctype="multipart/form-data" method="post">

@@ -98,6 +98,7 @@ def update_profile(request):
         'user_form':user_form,
         'profile_form':profle_form
     })
+@login_required(login_url='/account/login/')
 def change_password(request):
     if request.method == 'POST':
         form = PasswordChangeForm(request.user,request.POST)
