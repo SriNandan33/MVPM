@@ -46,7 +46,7 @@ def maintenace_request(request,id=None):
 @login_required(login_url='/account/login/')
 def to_let_view(request,id = None):
     property_instance = get_object_or_404(Property,id = id)
-    form = ToLetForm(request.POST or None , instance=property_instance)
+    form = ToLetForm(request.POST or None)
     if form.is_valid():
         form_instance = form.save(commit=False)
         form_instance.user = request.user

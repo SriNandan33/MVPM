@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Homes For Rent</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+</head>
+<body>
+    {% block content %}
+     <div class="container" style="margin-left: 20%;">
+         <p><a  href="/" style="text-decoration: none">Go Back</a>
+        <div class="row">
+            {% for obj in homes %}
+                    <div class="col-sm-8 col-md-8">
+                        <div class="thumbnail">
+                            <div class="col-md-4">
+                              <img  class="img-responsive img-thumbnail" style="float: left;margin-top: 8%"src="{{ obj.property.thumbnail.url}}" alt="home">
+                                </div>
+                          <div class="caption">
+                                <h3>{{ obj.property }}</h3>
+                                <p>Owner: {{ obj.property.user.username  }} | {{ obj.rent_amount }} /- per month |  {{ obj.property.location }} | {{ obj.property.city }}</p>
+                               <a href="/homes_for_rent/{{ obj.id }}/"  class="btn btn-danger" role="button">View</a></p>
+                              </div>
+                            </div>
+                          </div>
+                {% endfor %}
+            </div>
+    </div>
+    {% endblock content %}
+</body>
+</html>

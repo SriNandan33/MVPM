@@ -1,0 +1,11 @@
+
+
+{% extends 'core/homeforrent.html' %}
+{% block content %}
+    <div class="container" style="margin-left: 20%">
+    <div class="col-md-8">
+    <img src="{{ instance.property.thumbnail.url }}" class="img-responsive img-thumbnail">
+    </div>
+     {{ instance.user.username }}
+    </div>
+{% endblock %}
