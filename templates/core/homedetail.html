@@ -2,10 +2,33 @@
 
 {% extends 'core/homeforrent.html' %}
 {% block content %}
-    <div class="container" style="margin-left: 20%">
-    <div class="col-md-8">
-    <img src="{{ instance.property.thumbnail.url }}" class="img-responsive img-thumbnail">
-    </div>
-     {{ instance.user.username }}
+    <div class="container" style="margin-top: 2%">
+        <div class="row">
+              <div class="col-sm-8 col-md-8">
+                <div class="thumbnail">
+                  <img src="{{ instance.property.thumbnail.url }}"  alt="...">
+                </div>
+              </div>
+                <div class="col-sm-6 col-md-4">
+                    <div class="thumbnail">
+                          <div class="caption">
+                            <h3 style="color:#333">Details</h3>
+                            <p>Owner: {{ instance.property.user.username }}</p>
+                            <p>Name: {{ instance.property.proname }}</p>
+                            <p>Address: {{ instance.property.location }} | {{ instance.property.city }}</p>
+                          </div>
+                    </div>
+              </div>
+            <div class="col-sm-6 col-md-4 ">
+                <div class="thumbnail ">
+                  <div class="caption">
+                    <h3>Rental Terms</h3>
+                    <p>Rent: {{ instance.rent_amount }} /- per month</p>
+                    <p>Application Fee: 100 /-</p>
+                    <p>Security Deposit: 3000 /-</p>
+                  </div>
+                </div>
+            </div>
+        </div>
     </div>
 {% endblock %}

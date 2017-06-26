@@ -2,12 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="e623c922-eeb4-4dc9-b4fa-3621768c4a7a" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/core/urls.py" afterPath="$PROJECT_DIR$/core/urls.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/core/views.py" afterPath="$PROJECT_DIR$/core/views.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/promanage/views.py" afterPath="$PROJECT_DIR$/promanage/views.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/templates/core/index.html" afterPath="$PROJECT_DIR$/templates/core/index.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/templates/dashboard/dashboard.html" afterPath="$PROJECT_DIR$/templates/dashboard/dashboard.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/templates/core/homedetail.html" afterPath="$PROJECT_DIR$/templates/core/homedetail.html" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -68,23 +63,24 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="homedetail.html" pinned="false" current-in-tab="false">
+      <file leaf-file-name="homedetail.html" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/templates/core/homedetail.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="68">
-              <caret line="4" column="50" lean-forward="false" selection-start-line="4" selection-start-column="50" selection-end-line="4" selection-end-column="50" />
+            <state relative-caret-position="238">
+              <caret line="14" column="49" lean-forward="false" selection-start-line="14" selection-start-column="49" selection-end-line="14" selection-end-column="49" />
               <folding>
-                <element signature="e#87#111#0#HTML" expanded="true" />
+                <element signature="e#87#109#0#HTML" expanded="true" />
+                <element signature="e#518#536#0#HTML" expanded="true" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="homeforrent.html" pinned="false" current-in-tab="true">
+      <file leaf-file-name="homeforrent.html" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/templates/core/homeforrent.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="195">
-              <caret line="19" column="59" lean-forward="false" selection-start-line="19" selection-start-column="59" selection-end-line="19" selection-end-column="59" />
+            <state relative-caret-position="280">
+              <caret line="24" column="32" lean-forward="true" selection-start-line="24" selection-start-column="32" selection-end-line="24" selection-end-column="32" />
               <folding />
             </state>
           </provider>
@@ -152,8 +148,8 @@
         <option value="$PROJECT_DIR$/templates/dashboard/dashboard.html" />
         <option value="$PROJECT_DIR$/core/views.py" />
         <option value="$PROJECT_DIR$/core/urls.py" />
-        <option value="$PROJECT_DIR$/templates/core/homedetail.html" />
         <option value="$PROJECT_DIR$/templates/core/homeforrent.html" />
+        <option value="$PROJECT_DIR$/templates/core/homedetail.html" />
       </list>
     </option>
   </component>
@@ -932,21 +928,22 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/templates/core/homedetail.html">
+    <entry file="file://$PROJECT_DIR$/templates/core/homeforrent.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="68">
-          <caret line="4" column="50" lean-forward="false" selection-start-line="4" selection-start-column="50" selection-end-line="4" selection-end-column="50" />
-          <folding>
-            <element signature="e#87#111#0#HTML" expanded="true" />
-          </folding>
+        <state relative-caret-position="280">
+          <caret line="24" column="32" lean-forward="true" selection-start-line="24" selection-start-column="32" selection-end-line="24" selection-end-column="32" />
+          <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/templates/core/homeforrent.html">
+    <entry file="file://$PROJECT_DIR$/templates/core/homedetail.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="195">
-          <caret line="19" column="59" lean-forward="false" selection-start-line="19" selection-start-column="59" selection-end-line="19" selection-end-column="59" />
-          <folding />
+        <state relative-caret-position="238">
+          <caret line="14" column="49" lean-forward="false" selection-start-line="14" selection-start-column="49" selection-end-line="14" selection-end-column="49" />
+          <folding>
+            <element signature="e#87#109#0#HTML" expanded="true" />
+            <element signature="e#518#536#0#HTML" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
