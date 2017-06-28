@@ -83,7 +83,7 @@ def billing(request):
 def update_profile(request):
     if request.method == 'POST':
         user_form = UserForm(request.POST,instance=request.user)
-        profle_form = ProfileForm(request.POST,instance=request.user.userprofile)
+        profle_form = ProfileForm(request.POST,request.FILES,instance=request.user.userprofile)
         if user_form.is_valid() and profle_form.is_valid():
             user_form.save()
             profle_form.save()
