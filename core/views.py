@@ -28,7 +28,7 @@ def index(request):
     return render(request, "core/index.html", context)
 
 def home_for_rent(request):
-    homes = RentalProperty.objects.all()
+    homes = RentalProperty.objects.filter(is_available=True)
     context = {
         'homes':homes,
         'user':request.user

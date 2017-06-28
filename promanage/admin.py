@@ -11,7 +11,8 @@ class PropertyAdmin(admin.ModelAdmin):
 admin.site.register(models.Property,PropertyAdmin)
 
 class RentalAdmin(admin.ModelAdmin):
-    list_display = ["user","rent_amount"]
+    list_display = ["user","property","rent_amount","is_available"]
+    list_filter = ['is_available']
     search_fields = ["user_username",]
     class Meta:
         model= models.RentalProperty
