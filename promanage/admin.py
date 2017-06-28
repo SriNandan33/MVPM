@@ -18,6 +18,12 @@ class RentalAdmin(admin.ModelAdmin):
         model= models.RentalProperty
 
 admin.site.register(models.RentalProperty,RentalAdmin)
+class RentalApplicationAdmin(admin.ModelAdmin):
+    list_display = ['rent_property','name','email','phone','is_responded']
+    list_filter = ['is_responded']
+    class Meta:
+        model = models.RentalApplication
+admin.site.register(models.RentalApplication,RentalApplicationAdmin)
 
 class NotificationAdmin(admin.ModelAdmin):
     list_display = ["to_user","title","is_read"]

@@ -66,6 +66,16 @@ class RentalProperty(models.Model):
     def __str__(self):
         return self.property.proname
 
+class RentalApplication(models.Model):
+    rent_property = models.ForeignKey(RentalProperty,on_delete=models.CASCADE)
+    name = models.CharField(max_length=50)
+    email = models.EmailField()
+    phone = models.BigIntegerField(default=0)
+    is_responded = models.BooleanField(default=False)
+
+    def __str__(self):
+        return self.rent_property.property.proname
+
 class MaintenanceRequest(models.Model):
     user = models.ForeignKey(User,on_delete=models.CASCADE)
     property = models.ForeignKey(Property,on_delete=models.CASCADE)

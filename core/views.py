@@ -1,9 +1,11 @@
 from django.conf import settings
+from django.contrib import messages
 from django.core.mail import send_mail
 from django.shortcuts import render,get_object_or_404
 from django.shortcuts import HttpResponse
 from .forms import ContactForm
-from promanage.models import RentalProperty
+from promanage.forms import RentalApplicationForm
+from promanage.models import RentalProperty,RentalApplication
 
 def index(request):
     form = ContactForm(request.POST or None)
@@ -37,8 +39,15 @@ def home_for_rent(request):
 
 def home_detail(request,id = None):
     instance = get_object_or_404(RentalProperty,id = id)
+    form = RentalApplicationForm(request.POST or None)
+    if form.is_valid():
+        form_instance = form.save(commit=False)
+        form_instance.rent_property = instance
+        form_instance.save()
+        messages.success(request,"request sent successfully")
     context = {
         'user':request.user,
-        'instance':instance
+        'instance':instance,
+        'form':form
     }
     return render(request,'core/homedetail.html',context)
