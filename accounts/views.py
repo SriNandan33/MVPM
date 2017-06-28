@@ -9,7 +9,7 @@ from django.contrib.auth import (
 from django.contrib.auth.decorators import login_required
 from django.contrib.auth.forms import PasswordChangeForm
 from django.http import HttpResponse
-from django.shortcuts import render,redirect
+from django.shortcuts import render,redirect,get_object_or_404
 from django.http import HttpResponseRedirect
 from .forms import UserLoginForm ,UserForm,ProfileForm
 from .models import UserProfile
@@ -70,6 +70,11 @@ def mark_all_as_read(request):
        obj.save()
 
    return redirect('/account/dashboard/notifications')
+def mark_one_as_read(request,id=None):
+      notification = get_object_or_404(Notification,id = id)
+      notification.is_read = True
+      notification.save()
+      return redirect('/account/dashboard/notifications')
 
 @login_required(login_url='/account/login/')
 def newsupdates(request):

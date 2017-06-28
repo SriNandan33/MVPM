@@ -10,12 +10,12 @@
                     <div class="card mb-12">
                         <div class="card-header">
                             <i class="fa fa-bell-o"></i> Notifications
-                             <a style="float: right;text-decoration: none" href="/account/dashboard/mark_all_read"><i class="fa fa-check"></i> Mark All As Read</a>
+                             <a style="float: right;text-decoration: none" href="/account/dashboard/notifications/mark_all_read"><i class="fa fa-check"></i> Mark All As Read</a>
                         </div>
 
                         <div class="list-group list-group-flush small">
                             {% for i in unread_notifications %}
-                            <a href="#" class="list-group-item list-group-item-action">
+                            <a href="/account/dashboard/notifications/{{ i.id }}/mark_as_read" class="list-group-item list-group-item-action">
 
                                 <div class="media">
                                     <div class="media-body">
