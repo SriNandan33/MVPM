@@ -2,12 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="e623c922-eeb4-4dc9-b4fa-3621768c4a7a" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/core/views.py" afterPath="$PROJECT_DIR$/core/views.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/promanage/admin.py" afterPath="$PROJECT_DIR$/promanage/admin.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/promanage/forms.py" afterPath="$PROJECT_DIR$/promanage/forms.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/promanage/models.py" afterPath="$PROJECT_DIR$/promanage/models.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/templates/core/homedetail.html" afterPath="$PROJECT_DIR$/templates/core/homedetail.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/templates/core/homeforrent.html" afterPath="$PROJECT_DIR$/templates/core/homeforrent.html" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -69,9 +65,14 @@
       <file leaf-file-name="homedetail.html" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/templates/core/homedetail.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="155">
-              <caret line="32" column="108" lean-forward="false" selection-start-line="32" selection-start-column="108" selection-end-line="32" selection-end-column="108" />
-              <folding />
+            <state relative-caret-position="257">
+              <caret line="56" column="101" lean-forward="false" selection-start-line="56" selection-start-column="101" selection-end-line="56" selection-end-column="101" />
+              <folding>
+                <element signature="e#1833#1864#0#HTML" expanded="true" />
+                <element signature="e#2108#2139#0#HTML" expanded="true" />
+                <element signature="e#2383#2414#0#HTML" expanded="true" />
+                <element signature="e#2646#2677#0#HTML" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -190,38 +191,6 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="MVPM" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="MVPM" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="MVPM" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="templates" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="MVPM" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="MVPM" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="templates" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="dashboard" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -942,9 +911,14 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/templates/core/homedetail.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="155">
-          <caret line="32" column="108" lean-forward="false" selection-start-line="32" selection-start-column="108" selection-end-line="32" selection-end-column="108" />
-          <folding />
+        <state relative-caret-position="257">
+          <caret line="56" column="101" lean-forward="false" selection-start-line="56" selection-start-column="101" selection-end-line="56" selection-end-column="101" />
+          <folding>
+            <element signature="e#1833#1864#0#HTML" expanded="true" />
+            <element signature="e#2108#2139#0#HTML" expanded="true" />
+            <element signature="e#2383#2414#0#HTML" expanded="true" />
+            <element signature="e#2646#2677#0#HTML" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>

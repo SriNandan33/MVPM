@@ -36,36 +36,29 @@
         </div>
     </div>
     <div class="container">
-    <div class="row">
-         <div class="col-sm-4 col-md-2 ">
-            <div class="thumbnail">
-                {% if instance.thumbnail_1%}
-                    <img src="{{ instance.thumbnail_1.url }}"  alt="..." style="height:95px;width: 100%">
-               {% endif %}
-            </div>
-         </div>
-        <div class="col-sm-4 col-md-2 ">
-            <div class="thumbnail">
-                {% if instance.thumbnail_2%}
-                    <img src="{{ instance.thumbnail_2.url }}"  alt="..." style="height:95px;width: 100%">
-               {% endif %}
-            </div>
-         </div>
-        <div class="col-sm-4 col-md-2 ">
-            <div class="thumbnail">
-                {% if instance.thumbnail_3%}
-                    <img src="{{ instance.thumbnail_3.url }}"  alt="..." style="height:95px;width: 100%">
-               {% endif %}
-            </div>
-         </div>
-        <div class="col-sm-4 col-md-2 ">
-            <div class="thumbnail">
-                {% if instance.thumbnail_4%}
-                    <img src="{{ instance.thumbnail_4.url }}"  alt="..." style="height:95px;width: 100%">
-               {% endif %}
-            </div>
-         </div>
-     </div>
+        <div class="row">
+          <div class="col-xs-6 col-md-2">
+            <a href="{{ instance.thumbnail_1.url }}" target="_blank" class="thumbnail">
+              <img src="{{ instance.thumbnail_1.url }}" alt="thumbnail_1" style="height:95px;width: 100%">
+            </a>
+          </div>
+             <div class="col-xs-6 col-md-2">
+            <a href="{{ instance.thumbnail_2.url }}" target="_blank" class="thumbnail">
+              <img src="{{ instance.thumbnail_2.url }}" alt="thumbnail_2"  style="height:95px;width: 100%">
+            </a>
+          </div>
+             <div class="col-xs-6 col-md-2">
+            <a href="{{ instance.thumbnail_3.url }}" target="_blank" class="thumbnail">
+              <img src="{{ instance.thumbnail_3.url }}" alt="thumbnail_3"  style="height:95px;width: 100%">
+            </a>
+          </div>
+         <div class="col-xs-6 col-md-2">
+        <a href="{{ instance.thumbnail_4.url }}" target="_blank" class="thumbnail">
+          <img src="{{ instance.thumbnail_4.url }}" alt="thumbnail_4"  style="height:95px;width: 100%">
+        </a>
+      </div>
+</div>
+
     <div class="col-md-6 " id="getin">
         <h3>Want to get in ?</h3>
     <form method="post">
