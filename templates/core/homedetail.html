@@ -3,8 +3,8 @@
 {% extends 'core/homeforrent.html' %}
 {% block content %}
     <div class="container" style="margin-top: 2%">
-        <div class="row">
-              <div class="col-sm-8 col-md-8">
+        <div class="row ">
+              <div class="col-sm-8 col-md-8 ">
                 <div class="thumbnail">
                   <img src="{{ instance.property.thumbnail.url }}"  alt="...">
                 </div>
@@ -29,6 +29,38 @@
                   </div>
                 </div>
             </div>
+            </div>
         </div>
     </div>
+    <div class="container">
+    <div class="row">
+         <div class="col-sm-4 col-md-2 ">
+            <div class="thumbnail">
+                {% if instance.thumbnail_1%}
+                    <img src="{{ instance.thumbnail_1.url }}"  alt="..." style="height:95px;width: 100%">
+               {% endif %}
+            </div>
+         </div>
+        <div class="col-sm-4 col-md-2 ">
+            <div class="thumbnail">
+                {% if instance.thumbnail_2%}
+                    <img src="{{ instance.thumbnail_2.url }}"  alt="..." style="height:95px;width: 100%">
+               {% endif %}
+            </div>
+         </div>
+        <div class="col-sm-4 col-md-2 ">
+            <div class="thumbnail">
+                {% if instance.thumbnail_3%}
+                    <img src="{{ instance.thumbnail_3.url }}"  alt="..." style="height:95px;width: 100%">
+               {% endif %}
+            </div>
+         </div>
+        <div class="col-sm-4 col-md-2 ">
+            <div class="thumbnail">
+                {% if instance.thumbnail_4%}
+                    <img src="{{ instance.thumbnail_4.url }}"  alt="..." style="height:95px;width: 100%">
+               {% endif %}
+            </div>
+         </div>
+     </div>
 {% endblock %}

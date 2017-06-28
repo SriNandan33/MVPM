@@ -54,6 +54,10 @@ class RentalProperty(models.Model):
     user = models.ForeignKey(User,on_delete=models.CASCADE)
     property = models.ForeignKey(Property,on_delete=models.CASCADE)
     rent_amount = models.IntegerField(default=0)
+    thumbnail_1 = models.ImageField(upload_to=upload_location,null=True)
+    thumbnail_2 = models.ImageField(upload_to=upload_location, null=True)
+    thumbnail_3 = models.ImageField(upload_to=upload_location, null=True)
+    thumbnail_4 = models.ImageField(upload_to=upload_location, null=True)
     class Meta:
         verbose_name = 'RentalProperty'
         verbose_name_plural = 'RentalProperties'

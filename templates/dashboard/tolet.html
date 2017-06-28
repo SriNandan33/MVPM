@@ -7,10 +7,10 @@
                 <i class="fa fa-exclamation-triangle"></i> To-Let
             </div>
             <div class="col-md-6 mywell">
-               <form action="" method="post">
+               <form action="" method="post" enctype="multipart/form-data">
                 {% csrf_token %}
                 {{ form|crispy}}
-                   <button type="submit" class="btn btn-danger btn-block" value="submit"><i class="fa fa-paper-plane"></i> To-let</button>
+                   <button type="submit" class="btn btn-danger btn-block" name="submit" value="To_let"><i class="fa fa-paper-plane"></i> To-let</button>
                </form>
             </div>
      </div>
