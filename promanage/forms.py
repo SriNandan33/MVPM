@@ -27,7 +27,7 @@ class MaintenanceRequestForm(forms.ModelForm):
 class ToLetForm(forms.ModelForm):
     class Meta:
         model = RentalProperty
-        exclude = ['user','property']
+        exclude = ['user','property','is_available']
 class RentalApplicationForm(forms.ModelForm):
     class Meta:
         model = RentalApplication

@@ -21,7 +21,7 @@
                 <img src="{{ user.userprofile.avatar.url }}" class="img-responsive avatar" width="100%"/>
             {% endif %}
         </div>
-        <div class="col-md-6 mywell">
+        <div class="col-md-6" style="overflow: hidden;">
             <form enctype="multipart/form-data" method="post">
                 {% csrf_token %}
                 {{ user_form|crispy }}
