@@ -27,7 +27,7 @@ def login_view(request):
         messages.success(request,"Login Successful")
         if next:
             return redirect(next)
-        return redirect('/account/dashboard')
+        return redirect('/account/dashboard/manage_property/properties/')
     return render(request,'accounts/login.html',{"form":form})
 
 def logout_view(request):
