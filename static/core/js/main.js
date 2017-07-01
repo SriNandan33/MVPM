@@ -190,7 +190,7 @@ function init() {
             zoomControl:true,
 	        scrollwheel: false,
 	        navigationControl: true,
-	        mapTypeControl: false,
+	        mapTypeControl: true,
 	        scaleControl: false,
 	        draggable: true,
 
