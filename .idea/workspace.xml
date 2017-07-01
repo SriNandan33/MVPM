@@ -2,7 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="e623c922-eeb4-4dc9-b4fa-3621768c4a7a" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/templates/dashboard/notifications.html" afterPath="$PROJECT_DIR$/templates/dashboard/notifications.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/templates/core/index.html" afterPath="$PROJECT_DIR$/templates/core/index.html" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -17,26 +17,12 @@
   <component name="ExecutionTargetManager" SELECTED_TARGET="default_target" />
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="models.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/promanage/models.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="255">
-              <caret line="95" column="88" lean-forward="false" selection-start-line="95" selection-start-column="88" selection-end-line="95" selection-end-column="88" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="notifications.html" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/templates/dashboard/notifications.html">
+      <file leaf-file-name="index.html" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/templates/core/index.html">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="119">
-              <caret line="22" column="197" lean-forward="false" selection-start-line="22" selection-start-column="197" selection-end-line="22" selection-end-column="197" />
-              <folding>
-                <element signature="e#1249#1278#0#HTML" expanded="true" />
-                <element signature="e#1926#1960#0#HTML" expanded="true" />
-                <element signature="e#3185#3219#0#HTML" expanded="true" />
-              </folding>
+              <caret line="87" column="52" lean-forward="false" selection-start-line="87" selection-start-column="52" selection-end-line="87" selection-end-column="52" />
+              <folding />
             </state>
           </provider>
         </entry>
@@ -95,7 +81,6 @@
         <option value="$PROJECT_DIR$/core/urls.py" />
         <option value="$PROJECT_DIR$/promanage/views.py" />
         <option value="$PROJECT_DIR$/templates/dashboard/tolet.html" />
-        <option value="$PROJECT_DIR$/templates/core/index.html" />
         <option value="$PROJECT_DIR$/promanage/admin.py" />
         <option value="$PROJECT_DIR$/promanage/forms.py" />
         <option value="$PROJECT_DIR$/core/views.py" />
@@ -105,6 +90,7 @@
         <option value="$PROJECT_DIR$/accounts/urls.py" />
         <option value="$PROJECT_DIR$/promanage/models.py" />
         <option value="$PROJECT_DIR$/templates/dashboard/notifications.html" />
+        <option value="$PROJECT_DIR$/templates/core/index.html" />
       </list>
     </option>
   </component>
@@ -161,6 +147,60 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="MVPM" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="MVPM" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="static" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="MVPM" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="MVPM" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="static" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="core" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="MVPM" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="MVPM" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="static" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="core" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="img" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
         </subPane>
       </pane>
       <pane id="Scope" />
@@ -174,17 +214,17 @@
     <property name="DefaultHtmlFileTemplate" value="HTML File" />
   </component>
   <component name="RecentsManager">
-    <key name="MoveFile.RECENT_KEYS">
-      <recent name="C:\Users\NanDuSrInIvaS\Desktop\MVPM\static\core\rent\css" />
-      <recent name="C:\Users\NanDuSrInIvaS\PycharmProjects\mvpm\templates\core" />
-      <recent name="C:\Users\NanDuSrInIvaS\PycharmProjects\mvpm\static\core" />
-    </key>
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\NanDuSrInIvaS\Desktop\MVPM\static\core\img" />
       <recent name="C:\Users\NanDuSrInIvaS\Desktop\MVPM\static\core\rent\css" />
       <recent name="C:\Users\NanDuSrInIvaS\Desktop\mvpm_9\static\dashboard\css" />
       <recent name="C:\Users\NanDuSrInIvaS\PycharmProjects\mvpm\static\dashboard" />
       <recent name="C:\Users\NanDuSrInIvaS\PycharmProjects\mvpm\templates\dashboard" />
-      <recent name="C:\Users\NanDuSrInIvaS\PycharmProjects\mvpm\static\accounts" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\NanDuSrInIvaS\Desktop\MVPM\static\core\rent\css" />
+      <recent name="C:\Users\NanDuSrInIvaS\PycharmProjects\mvpm\templates\core" />
+      <recent name="C:\Users\NanDuSrInIvaS\PycharmProjects\mvpm\static\core" />
     </key>
   </component>
   <component name="RunManager" selected="Django server.mvpm">
@@ -764,13 +804,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/templates/core/index.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-117">
-          <caret line="390" column="19" lean-forward="true" selection-start-line="390" selection-start-column="19" selection-end-line="390" selection-end-column="19" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/promanage/views.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="51">
@@ -845,6 +878,18 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/templates/dashboard/notifications.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="119">
+          <caret line="22" column="197" lean-forward="false" selection-start-line="22" selection-start-column="197" selection-end-line="22" selection-end-column="197" />
+          <folding>
+            <element signature="e#1249#1278#0#HTML" expanded="false" />
+            <element signature="e#1926#1960#0#HTML" expanded="false" />
+            <element signature="e#3185#3219#0#HTML" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/promanage/models.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="255">
@@ -853,15 +898,11 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/templates/dashboard/notifications.html">
+    <entry file="file://$PROJECT_DIR$/templates/core/index.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="119">
-          <caret line="22" column="197" lean-forward="false" selection-start-line="22" selection-start-column="197" selection-end-line="22" selection-end-column="197" />
-          <folding>
-            <element signature="e#1249#1278#0#HTML" expanded="true" />
-            <element signature="e#1926#1960#0#HTML" expanded="true" />
-            <element signature="e#3185#3219#0#HTML" expanded="true" />
-          </folding>
+          <caret line="87" column="52" lean-forward="false" selection-start-line="87" selection-start-column="52" selection-end-line="87" selection-end-column="52" />
+          <folding />
         </state>
       </provider>
     </entry>
