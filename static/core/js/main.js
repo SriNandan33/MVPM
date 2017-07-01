@@ -194,6 +194,7 @@ function init() {
 	        scaleControl: false,
 	        draggable: true,
 
+
         // How you would like to style the map.
         // This is where you would paste any style found on Snazzy Maps.
         styles: [{

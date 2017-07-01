@@ -188,11 +188,12 @@ function init() {
 	        center: myLatLng,
 	        disableDefaultUI: true,
             zoomControl:true,
-	        scrollwheel: true,
+	        scrollwheel: false,
 	        navigationControl: true,
-	        mapTypeControl: false,
+	        mapTypeControl: true,
 	        scaleControl: false,
 	        draggable: true,
+
 
         // How you would like to style the map.
         // This is where you would paste any style found on Snazzy Maps.
@@ -256,7 +257,8 @@ function init() {
     var marker = new google.maps.Marker({
         position: new google.maps.LatLng(17.716241, 83.306772),
         map: map,
-		icon: '/static/core/img/icons/map-marker.png',
+        title: 'IndiGenius',
+        animation: google.maps.Animation.BOUNCE,
     });
 }
 

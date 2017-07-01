@@ -35,6 +35,10 @@ EMAIL_USE_TLS = True
 
 
 INSTALLED_APPS = [
+    'core',
+    'accounts',
+    'promanage',
+
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',
@@ -43,9 +47,6 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'django.contrib.humanize',
 
-    'core',
-    'accounts',
-    'promanage',
 
     #third party apps
 
