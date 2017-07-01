@@ -19,7 +19,8 @@
                                 <div class="list-group-item list-group-item-action">
                                 <div class="media">
                                     <div class="media-body">
-                                        <i class="fa fa-circle" aria-hidden="true" style="font-size:0.5rem;color: #00cc00"></i><strong> {{ i.title }}</strong>
+                                        <i class="fa fa-circle" aria-hidden="true" style="font-size:0.5rem;color: #00cc00"></i><strong> {{ i.title }} </strong>
+                                        <a style="text-decoration: none" href="/account/dashboard/notifications/{{ i.id }}/mark_as_read" data-toggle="tooltip" data-placement="left" title="Mark As Read"><i class="fa fa-check-circle"></i></a>
                                         <p>{{ i.content }}
                                             {% if i.file %}
                                         <a href="{{ i.file.url }}">{{ i.file }}</a><br/>

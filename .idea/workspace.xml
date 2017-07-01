@@ -2,7 +2,6 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="e623c922-eeb4-4dc9-b4fa-3621768c4a7a" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/promanage/models.py" afterPath="$PROJECT_DIR$/promanage/models.py" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/templates/dashboard/notifications.html" afterPath="$PROJECT_DIR$/templates/dashboard/notifications.html" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -31,11 +30,12 @@
       <file leaf-file-name="notifications.html" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/templates/dashboard/notifications.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="204">
-              <caret line="44" column="51" lean-forward="false" selection-start-line="44" selection-start-column="51" selection-end-line="44" selection-end-column="51" />
+            <state relative-caret-position="119">
+              <caret line="22" column="197" lean-forward="false" selection-start-line="22" selection-start-column="197" selection-end-line="22" selection-end-column="197" />
               <folding>
-                <element signature="e#1684#1718#0#HTML" expanded="true" />
-                <element signature="e#2943#2977#0#HTML" expanded="true" />
+                <element signature="e#1249#1278#0#HTML" expanded="true" />
+                <element signature="e#1926#1960#0#HTML" expanded="true" />
+                <element signature="e#3185#3219#0#HTML" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -855,11 +855,12 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/templates/dashboard/notifications.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="204">
-          <caret line="44" column="51" lean-forward="false" selection-start-line="44" selection-start-column="51" selection-end-line="44" selection-end-column="51" />
+        <state relative-caret-position="119">
+          <caret line="22" column="197" lean-forward="false" selection-start-line="22" selection-start-column="197" selection-end-line="22" selection-end-column="197" />
           <folding>
-            <element signature="e#1684#1718#0#HTML" expanded="true" />
-            <element signature="e#2943#2977#0#HTML" expanded="true" />
+            <element signature="e#1249#1278#0#HTML" expanded="true" />
+            <element signature="e#1926#1960#0#HTML" expanded="true" />
+            <element signature="e#3185#3219#0#HTML" expanded="true" />
           </folding>
         </state>
       </provider>
