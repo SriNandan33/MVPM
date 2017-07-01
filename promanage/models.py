@@ -86,11 +86,14 @@ class MaintenanceRequest(models.Model):
 
     def __str__(self):
         return self.property.proname
-
+def notification_file_location(instance,filename):
+    return "%s/%d/%s" % (instance.to_user,instance.id,filename)
 class Notification(models.Model):
     to_user = models.ForeignKey(User,on_delete=models.CASCADE)
     title = models.CharField(max_length=250)
     content = models.TextField('content')
+    file = models.FileField(upload_to=notification_file_location,null=True,blank=True)
+    image = models.ImageField(upload_to=notification_file_location,null=True,blank=True)
     date = models.DateTimeField(auto_now_add=True)
     is_read = models.BooleanField(default=False)
 

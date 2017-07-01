@@ -15,27 +15,43 @@
 
                         <div class="list-group list-group-flush small">
                             {% for i in unread_notifications %}
-                            <a href="/account/dashboard/notifications/{{ i.id }}/mark_as_read" class="list-group-item list-group-item-action">
-
+                            <!--<a href="/account/dashboard/notifications/{{ i.id }}/mark_as_read" class="list-group-item list-group-item-action">-->
+                                <div class="list-group-item list-group-item-action">
                                 <div class="media">
                                     <div class="media-body">
                                         <i class="fa fa-circle" aria-hidden="true" style="font-size:0.5rem;color: #00cc00"></i><strong> {{ i.title }}</strong>
-                                        <p>{{ i.content }}</p>
+                                        <p>{{ i.content }}
+                                            {% if i.file %}
+                                        <a href="{{ i.file.url }}">{{ i.file }}</a><br/>
+                                        {% endif %}
+                                        </p>
+                                        {% if i.image %}
+                                            <a href="{{ i.image.url }}" target="_blank"><img src="{{ i.image.url }}" style="height: 100px;width: 200px"></a>
+                                        {% endif %}
                                         <div class="text-muted smaller">{{ i.date | naturaltime}}</div>
                                     </div>
                                 </div>
-                            </a>
+                                </div>
                             {% endfor %}
                             {% for j in read_notifications %}
-                            <a href="#" class="list-group-item list-group-item-action">
+                           <!-- <a href="#" class="list-group-item list-group-item-action">-->
+                                <div class="list-group-item list-group-item-action">
                                 <div class="media">
                                     <div class="media-body">
                                         <strong> {{ j.title }}</strong>
-                                        <p>{{ j.content }}</p>
+                                        <p>{{ j.content }}
+                                            {% if j.file %}
+                                        <a href="{{ j.file.url }}">{{ j.file }}</a>
+                                        {% endif %}
+                                        </p>
+
+                                       {% if j.image %}
+                                            <a href="{{ j.image.url }}" target="_blank"><img src="{{ j.image.url }}" style="height: 100px;width: 200px"></a>
+                                        {% endif %}
                                         <div class="text-muted smaller">{{ j.date | naturaltime}}</div>
                                     </div>
                                 </div>
-                            </a>
+                            </div>
                             {% endfor %}
                         </div>
                     </div>
