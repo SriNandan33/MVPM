@@ -181,19 +181,20 @@ function init() {
     // Basic options for a simple Google Map
     // For more options see: https://developers.google.com/maps/documentation/javascript/reference#MapOptions
 
-	    var myLatLng = new google.maps.LatLng(22.402789, 91.822156);
+	    var myLatLng = new google.maps.LatLng(17.7159703,83.3036012);
 
 	    var mapOptions = {
-	        zoom: 15,
+	        zoom: 16,
 	        center: myLatLng,
 	        disableDefaultUI: true,
-	        scrollwheel: false,
+            zoomControl:true,
+	        scrollwheel: true,
 	        navigationControl: true,
 	        mapTypeControl: false,
 	        scaleControl: false,
 	        draggable: true,
 
-        // How you would like to style the map. 
+        // How you would like to style the map.
         // This is where you would paste any style found on Snazzy Maps.
         styles: [{
             featureType: 'water',
@@ -223,7 +224,7 @@ function init() {
             featureType: 'road.arterial',
             elementType: 'labels.icon',
             stylers: [{
-                visibility: 'off'
+                visibility: 'on'
             }]
         }, {
             featureType: 'administrative',
@@ -234,17 +235,17 @@ function init() {
         }, {
             featureType: 'transit',
             stylers: [{
-                visibility: 'off'
+                visibility: 'on'
             }]
         }, {
             featureType: 'poi',
             stylers: [{
-                visibility: 'off'
+                visibility: 'on',
             }]
         }]
     };
 
-    // Get the HTML DOM element that will contain your map 
+    // Get the HTML DOM element that will contain your map
     // We are using a div with id="map" seen below in the <body>
     var mapElement = document.getElementById('map-canvas');
 
@@ -253,9 +254,9 @@ function init() {
 
     // Let's also add a marker while we're at it
     var marker = new google.maps.Marker({
-        position: new google.maps.LatLng(22.402789, 91.822156),
+        position: new google.maps.LatLng(17.716241, 83.306772),
         map: map,
-		icon: 'img/icons/map-marker.png',
+		icon: '/static/core/img/icons/map-marker.png',
     });
 }
 
