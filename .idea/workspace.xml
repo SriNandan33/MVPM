@@ -2,11 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="e623c922-eeb4-4dc9-b4fa-3621768c4a7a" name="Default" comment="">
-      <change type="DELETED" beforePath="$PROJECT_DIR$/static/core/img/icons/map-marker.png" afterPath="" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/static/core/js/main.js" afterPath="$PROJECT_DIR$/static/core/js/main.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/static_cdn/core/js/main.js" afterPath="$PROJECT_DIR$/static_cdn/core/js/main.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/templates/core/index.html" afterPath="$PROJECT_DIR$/templates/core/index.html" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -34,8 +31,8 @@
       <file leaf-file-name="main.js" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/static/core/js/main.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="42">
-              <caret line="259" column="47" lean-forward="false" selection-start-line="259" selection-start-column="47" selection-end-line="259" selection-end-column="47" />
+            <state relative-caret-position="110">
+              <caret line="190" column="30" lean-forward="false" selection-start-line="190" selection-start-column="30" selection-end-line="190" selection-end-column="30" />
               <folding />
             </state>
           </provider>
@@ -909,11 +906,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="119">
           <caret line="22" column="197" lean-forward="false" selection-start-line="22" selection-start-column="197" selection-end-line="22" selection-end-column="197" />
-          <folding>
-            <element signature="e#1249#1278#0#HTML" expanded="false" />
-            <element signature="e#1926#1960#0#HTML" expanded="false" />
-            <element signature="e#3185#3219#0#HTML" expanded="false" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -921,7 +913,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="255">
           <caret line="95" column="88" lean-forward="false" selection-start-line="95" selection-start-column="88" selection-end-line="95" selection-end-column="88" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -940,8 +931,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/static/core/js/main.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="42">
-          <caret line="259" column="47" lean-forward="false" selection-start-line="259" selection-start-column="47" selection-end-line="259" selection-end-column="47" />
+        <state relative-caret-position="110">
+          <caret line="190" column="30" lean-forward="false" selection-start-line="190" selection-start-column="30" selection-end-line="190" selection-end-column="30" />
           <folding />
         </state>
       </provider>

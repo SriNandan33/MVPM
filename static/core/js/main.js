@@ -188,7 +188,7 @@ function init() {
 	        center: myLatLng,
 	        disableDefaultUI: true,
             zoomControl:true,
-	        scrollwheel: true,
+	        scrollwheel: false,
 	        navigationControl: true,
 	        mapTypeControl: false,
 	        scaleControl: false,
