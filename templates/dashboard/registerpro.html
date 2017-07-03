@@ -10,7 +10,7 @@
         <form method="post" action="" enctype="multipart/form-data">
             {% csrf_token %}
             {{form|crispy  }}
-            <!--<button class="btn btn-danger btn-block" type="submit" name="submit" value="Add_property">Proceed to payment</button>-->
+            <button class="btn btn-danger" type="submit" name="submit" value="Add_property">Register Property</button><br/><br/>
             <a href="https://www.instamojo.com/@indigenius/" rel="im-checkout" data-behaviour="remote" data-style="None" data-text="Proceed to Payment" >pay</a>
         </form>
     </div>

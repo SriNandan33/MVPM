@@ -19,6 +19,7 @@
 }
 
 .im-checkout-btn:hover {
+  background: rgb(47, 190, 109);
   color: #ffffff;
   text-decoration: none;
 }

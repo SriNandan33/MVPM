@@ -13,7 +13,6 @@ def Property_register_view(request):
         instance.user = request.user
         instance.save()
         messages.success(request,"Property Registered successfully")
-        return redirect('/account/dashboard/manage_property/properties/')
     return render(request,'dashboard/registerpro.html',{'form':form})
 
 @login_required(login_url='/account/login/')
