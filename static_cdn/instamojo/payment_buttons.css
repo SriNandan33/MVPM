@@ -1,0 +1,24 @@
+.im-checkout{
+    max-width: 100%;
+    margin-bottom: 20px;
+}
+.im-checkout-btn {
+  background: #e02626;
+  -webkit-border-radius: .25rem;
+  -moz-border-radius: .25rem;
+  border-radius: .25rem;
+  font-family: Arial;
+  color: #ffffff;
+  font-size: 15px;
+  background: #d9534f;
+  padding: 10px 20px 10px 20px;
+  border: solid #d9534f 0px;
+  text-decoration: none;
+  display: block;
+  width: 100%;
+}
+
+.im-checkout-btn:hover {
+  color: #ffffff;
+  text-decoration: none;
+}
