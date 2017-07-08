@@ -60,8 +60,8 @@ class RentalProperty(models.Model):
     thumbnail_3 = models.ImageField(upload_to=upload_location, null=True)
     thumbnail_4 = models.ImageField(upload_to=upload_location, null=True)
     class Meta:
-        verbose_name = 'RentalProperty'
-        verbose_name_plural = 'RentalProperties'
+        verbose_name = 'Rental Property'
+        verbose_name_plural = 'Rental Properties'
 
     def __str__(self):
         return self.property.proname
@@ -72,6 +72,9 @@ class RentalApplication(models.Model):
     email = models.EmailField()
     phone = models.BigIntegerField(default=0)
     is_responded = models.BooleanField(default=False)
+    class Meta:
+        verbose_name = 'Rental Application'
+        verbose_name_plural = 'Rental Applications'
 
     def __str__(self):
         return self.rent_property.property.proname
@@ -83,6 +86,9 @@ class MaintenanceRequest(models.Model):
     describe_issue = models.TextField('Describe Issue',null=True)
     date = models.DateTimeField(auto_now_add=True)
     is_serviced = models.BooleanField(default=False)
+    class Meta:
+        verbose_name = 'Maintenance Request'
+        verbose_name_plural = 'Maintenance Requests'
 
     def __str__(self):
         return self.property.proname
