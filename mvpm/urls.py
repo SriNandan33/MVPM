@@ -4,9 +4,9 @@ from django.conf.urls.static import static
 from django.contrib import admin
 from accounts.views import login_view,logout_view
 
-admin.site.site_header = "My Vizag Property Management"
-admin.site.site_title ="MVPM"
-admin.site.index_title = "MVPM admin"
+admin.site.site_header = "Manage Vizag Property"
+admin.site.site_title ="MVP"
+admin.site.index_title = "MVP admin"
 
 urlpatterns = [
     url(r'^',include('core.urls')),
