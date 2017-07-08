@@ -2,11 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="e623c922-eeb4-4dc9-b4fa-3621768c4a7a" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/promanage/views.py" afterPath="$PROJECT_DIR$/promanage/views.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/static/instamojo/payment_buttons.css" afterPath="$PROJECT_DIR$/static/instamojo/payment_buttons.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/templates/core/homeforrent.html" afterPath="$PROJECT_DIR$/templates/core/homeforrent.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/templates/dashboard/dashboard.html" afterPath="$PROJECT_DIR$/templates/dashboard/dashboard.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/templates/dashboard/registerpro.html" afterPath="$PROJECT_DIR$/templates/dashboard/registerpro.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -135,6 +131,7 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="Scope" />
       <pane id="Scratches" />
       <pane id="ProjectPane">
         <subPane>
@@ -182,7 +179,6 @@
           </PATH>
         </subPane>
       </pane>
-      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -806,7 +802,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="144">
           <caret line="12" column="25" lean-forward="false" selection-start-line="12" selection-start-column="25" selection-end-line="12" selection-end-column="25" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -814,7 +809,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="17">
           <caret line="484" column="13" lean-forward="false" selection-start-line="484" selection-start-column="13" selection-end-line="484" selection-end-column="13" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -830,7 +824,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="119">
           <caret line="208" column="7830" lean-forward="false" selection-start-line="208" selection-start-column="7830" selection-end-line="208" selection-end-column="7830" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -846,7 +839,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="272">
           <caret line="21" column="32" lean-forward="true" selection-start-line="21" selection-start-column="32" selection-end-line="21" selection-end-column="32" />
-          <folding />
         </state>
       </provider>
     </entry>
